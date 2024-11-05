@@ -1,10 +1,9 @@
-package br.com.fiap.energy_tech.beta;
+package br.com.fiap.energy_tech.beta.repositories;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import br.com.fiap.energy_tech.beta.entities.Eletrodomestico;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.Collection;
 import java.util.UUID;
 
 @Repository

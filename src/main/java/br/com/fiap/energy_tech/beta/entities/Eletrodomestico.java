@@ -1,4 +1,4 @@
-package br.com.fiap.energy_tech.beta;
+package br.com.fiap.energy_tech.beta.entities;
 
 import jakarta.persistence.*;
 
@@ -30,7 +30,6 @@ public class Eletrodomestico {
     public UUID getId() {
         return id;
     }
-
 
     public void setId(UUID id) {
         this.id = id;

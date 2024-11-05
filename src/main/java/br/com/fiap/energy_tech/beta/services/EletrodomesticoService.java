@@ -1,5 +1,7 @@
-package br.com.fiap.energy_tech.beta;
+package br.com.fiap.energy_tech.beta.services;
 
+import br.com.fiap.energy_tech.beta.entities.Eletrodomestico;
+import br.com.fiap.energy_tech.beta.repositories.EletrodomesticoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

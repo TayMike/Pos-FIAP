@@ -1,5 +1,7 @@
-package br.com.fiap.energy_tech.beta;
+package br.com.fiap.energy_tech.beta.controllers;
 
+import br.com.fiap.energy_tech.beta.entities.Eletrodomestico;
+import br.com.fiap.energy_tech.beta.services.EletrodomesticoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
