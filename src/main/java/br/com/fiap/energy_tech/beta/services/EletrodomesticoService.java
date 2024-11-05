@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -23,6 +24,10 @@ public class EletrodomesticoService {
         return repository.findById(id);
     }
 
+    public List<Eletrodomestico> findByTipo(String tipo) {
+        return repository.findByTipo(tipo);
+    }
+
     public Eletrodomestico save(Eletrodomestico eletrodomestico) {
         eletrodomestico = repository.save(eletrodomestico);
         return eletrodomestico;
@@ -34,6 +39,7 @@ public class EletrodomesticoService {
         buscaEletrodomestico.setDescricao(eletrodomestico.getDescricao());
         buscaEletrodomestico.setPreco(eletrodomestico.getPreco());
         buscaEletrodomestico.setUrlDaImagem(eletrodomestico.getUrlDaImagem());
+        buscaEletrodomestico.setTipo(eletrodomestico.getTipo());
         buscaEletrodomestico = repository.save(buscaEletrodomestico);
         return buscaEletrodomestico;
     }

@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -27,6 +28,12 @@ public class EletrodomesticoController {
     @GetMapping("/{id}")
     public ResponseEntity<Optional<Eletrodomestico>> findById(@PathVariable UUID id) {
         var eletrodomestico = service.findById(id);
+        return ResponseEntity.ok(eletrodomestico);
+    }
+
+    @GetMapping("/tipo}")
+    public ResponseEntity<List<Eletrodomestico>> findById(@PathVariable String tipo) {
+        var eletrodomestico = service.findByTipo(tipo);
         return ResponseEntity.ok(eletrodomestico);
     }
 

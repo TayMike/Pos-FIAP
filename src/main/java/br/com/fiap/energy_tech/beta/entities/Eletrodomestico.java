@@ -14,17 +14,19 @@ public class Eletrodomestico {
     private UUID id;
     private String nome;
     private String descricao;
+    private String tipo;
     private double preco;
     private String urlDaImagem;
 
     public Eletrodomestico() {};
 
-    public Eletrodomestico(UUID id, String urlDaImagem, double preco, String nome, String descricao) {
+    public Eletrodomestico(UUID id, String urlDaImagem, double preco, String nome, String descricao, String tipo) {
         this.id = id;
         this.urlDaImagem = urlDaImagem;
         this.preco = preco;
         this.nome = nome;
         this.descricao = descricao;
+        this.tipo = tipo;
     }
 
     public UUID getId() {
@@ -67,6 +69,14 @@ public class Eletrodomestico {
         this.urlDaImagem = urlDaImagem;
     }
 
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -86,6 +96,7 @@ public class Eletrodomestico {
                 "id=" + id +
                 ", nome='" + nome + '\'' +
                 ", descricao='" + descricao + '\'' +
+                ", tipo='" + tipo + '\'' +
                 ", preco=" + preco +
                 ", urlDaImagem='" + urlDaImagem + '\'' +
                 '}';
